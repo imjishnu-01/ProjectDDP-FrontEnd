@@ -1,0 +1,10 @@
+import{aj as v,ak as _,K as w,ai as M}from"./index.cdd841bc.js";function B(t){return t<.5?4*t*t*t:.5*Math.pow(2*t-2,3)+1}function b(t){const o=t-1;return o*o*o+1}function P(t,o){var s={};for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&o.indexOf(n)<0&&(s[n]=t[n]);if(t!=null&&typeof Object.getOwnPropertySymbols=="function")for(var e=0,n=Object.getOwnPropertySymbols(t);e<n.length;e++)o.indexOf(n[e])<0&&Object.prototype.propertyIsEnumerable.call(t,n[e])&&(s[n[e]]=t[n[e]]);return s}function I(t,{delay:o=0,duration:s=400,easing:n=v}={}){const e=+getComputedStyle(t).opacity;return{delay:o,duration:s,easing:n,css:u=>`opacity: ${u*e}`}}function R(t,{delay:o=0,duration:s=400,easing:n=b,x:e=0,y:u=0,opacity:f=0}={}){const c=getComputedStyle(t),a=+c.opacity,y=c.transform==="none"?"":c.transform,i=a*(1-f),[r,l]=_(e),[p,g]=_(u);return{delay:o,duration:s,easing:n,css:(m,$)=>`
+			transform: ${y} translate(${(1-m)*r}${l}, ${(1-m)*p}${g});
+			opacity: ${a-i*$}`}}function U(t,{delay:o=0,duration:s=400,easing:n=b,start:e=0,opacity:u=0}={}){const f=getComputedStyle(t),c=+f.opacity,a=f.transform==="none"?"":f.transform,y=1-e,i=c*(1-u);return{delay:o,duration:s,easing:n,css:(r,l)=>`
+			transform: ${a} scale(${1-y*l});
+			opacity: ${c-i*l}
+		`}}function V(t){var{fallback:o}=t,s=P(t,["fallback"]);const n=new Map,e=new Map;function u(c,a,y){const{delay:i=0,duration:r=d=>Math.sqrt(d)*30,easing:l=b}=w(w({},s),y),p=c.getBoundingClientRect(),g=a.getBoundingClientRect(),m=p.left-g.left,$=p.top-g.top,k=p.width/g.width,x=p.height/g.height,C=Math.sqrt(m*m+$*$),h=getComputedStyle(a),S=h.transform==="none"?"":h.transform,j=+h.opacity;return{delay:i,duration:M(r)?r(C):r,easing:l,css:(d,O)=>`
+				opacity: ${d*j};
+				transform-origin: top left;
+				transform: ${S} translate(${O*m}px,${O*$}px) scale(${d+(1-d)*k}, ${d+(1-d)*x});
+			`}}function f(c,a,y){return(i,r)=>(c.set(r.key,i),()=>{if(a.has(r.key)){const l=a.get(r.key);return a.delete(r.key),u(l,i,r)}return c.delete(r.key),o&&o(i,r,y)})}return[f(e,n,!1),f(n,e,!0)]}export{I as a,B as b,V as c,b as d,R as f,U as s};
