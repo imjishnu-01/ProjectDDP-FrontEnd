@@ -1,1 +1,1 @@
-export const baseAPIURL = "http://backend.projectddp.com/"
+export const baseAPIURL = "https://backend.projectddp.com/"
