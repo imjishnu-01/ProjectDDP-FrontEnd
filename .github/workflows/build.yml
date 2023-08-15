@@ -23,4 +23,4 @@ jobs:
           server: https://projectddp.com
           app: 'project-ddp'
           token: '${{ secrets.APP_TOKEN }}'
-          image: 'ghcr.io/imjishnu-01/ProjectDDP-FrontEnd:latest'
+          image: 'ghcr.io/imjishnu-01/projectddp-frontend:latest'
