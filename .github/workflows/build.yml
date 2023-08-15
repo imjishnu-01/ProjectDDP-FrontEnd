@@ -20,7 +20,7 @@ jobs:
       - name: Deploy on CapRover
         uses: caprover/deploy-from-github@v1.1.2
         with:
-          server: https://project-ddp.projectddp.com
+          server: https://projectddp.com
           app: 'ProjectDDP-FrontEnd'
           token: '${{ secrets.APP_TOKEN }}'
           image: 'ghcr.io/imjishnu-01/ProjectDDP-FrontEnd:latest'
