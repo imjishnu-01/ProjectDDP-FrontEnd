@@ -18,7 +18,7 @@ jobs:
           accessToken: ${{ github.token }}
           containerRegistry: true
       - name: Deploy on CapRover
-        uses: caprover/deploy-from-github@v1.1.2
+        uses: caprover/deploy-from-github@v1.2.0
         with:
           server: https://projectddp.com
           app: 'ProjectDDP-FrontEnd'
