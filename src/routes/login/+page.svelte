@@ -97,7 +97,7 @@
 </script>
 
 <div class="container flex justify-center items-center h-screen">
-	<form class="card p-4 flex flex-col gap-3 w-80">
+	<form class="card p-4 flex flex-col gap-3 w-80" on:submit|preventDefault={login}>
 		<h1 class="text-center text-3xl font-bold">Login</h1>
 		<label class="label">
 			<span>Email</span>
@@ -125,7 +125,7 @@
 			>
 				Login
 			</button>
-			<button class="text-right pe-3 text-blue-600 dark:text-blue-500" on:click={openForgotPasswordl}>Forgo Password</button>
+			<button class="text-right pe-3 text-blue-600 dark:text-blue-500" on:click={() => openForgotPasswordl()}>Forgo Password</button>
 
 		{/if}
 		<hr />
