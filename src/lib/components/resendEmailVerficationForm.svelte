@@ -1,5 +1,6 @@
 <script>
 	import { baseAPIURL } from './publicVar';
+
 	let email = '';
 	let errorMessage = '';
 	let isEmailSent = false;
@@ -35,6 +36,7 @@
 	<form class="card p-4 flex flex-col gap-3">
 		{#if isEmailSent}
 			<h2 class="text-center">You will receive an verification email shortly</h2>
+			<a href="/login" class="btn bg-surface-500"> Login </a>
 		{:else}
 			<h2>Resend verification email</h2>
 			<input class="input" type="text" placeholder="Email" bind:value={email} />
