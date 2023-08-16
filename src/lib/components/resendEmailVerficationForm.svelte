@@ -1,5 +1,6 @@
 <script>
 	import { baseAPIURL } from './publicVar';
+	import { browser } from '$app/environment';
 
 	let email = '';
 	let errorMessage = '';
@@ -30,13 +31,20 @@
 			// Display error message or handle error as needed
 		}
 	}
+
+
+	function gotoLogin() {
+		if(browser){
+			window.location.href="/login"
+		}
+	}
 </script>
 
 <div class="container">
 	<form class="card p-4 flex flex-col gap-3">
 		{#if isEmailSent}
 			<h2 class="text-center">You will receive an verification email shortly</h2>
-			<a href="/login" class="btn bg-surface-500"> Login </a>
+			<button class="btn bg-surface-500" on:click={gotoLogin}> Login </button>
 		{:else}
 			<h2>Resend verification email</h2>
 			<input class="input" type="text" placeholder="Email" bind:value={email} />
