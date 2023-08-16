@@ -30,7 +30,7 @@
 	};
   
 	// Call the verification function on component mount
-	onMount(verifyEmail);
+	//onMount(verifyEmail);
   </script>
   
 <div class="container flex justify-center items-center h-screen">

@@ -77,6 +77,11 @@
 		};
 		modalStore.trigger(modal);
 	}
+	const handleKeyPress = (event: { key: string; }) =>{
+		if(event.key === 'Enter'){
+			login();
+		}
+	}
 	// Check if the user is already logged in
 	onMount(async () => {
 		const token = getCookie('token');
@@ -92,7 +97,7 @@
 		<h1 class="text-center text-3xl font-bold">Login</h1>
 		<label class="label">
 			<span>Email</span>
-			<input class="input w-full" type="email" placeholder="Email" bind:value={email} />
+			<input class="input w-full" type="email" placeholder="Email" bind:value={email} on:keydown={handleKeyPress} />
 		</label>
 		<label class="label">
 			<span>Password</span>
