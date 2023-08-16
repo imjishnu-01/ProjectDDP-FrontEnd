@@ -118,14 +118,14 @@
 		{/if}
 		{#if !disableLoginButton}
 			<button
-				type="button"
+				type="submit"
 				class="btn bg-primary-500 ml-auto"
 				style="width: 10rem"
 				on:click={() => login()}
 			>
 				Login
 			</button>
-			<button class="text-right pe-3 text-blue-600 dark:text-blue-500" on:click={() => openForgotPasswordl()}>Forgo Password</button>
+			<button type="button" class="text-right pe-3 text-blue-600 dark:text-blue-500" on:click={() => openForgotPasswordl()}>Forgo Password</button>
 
 		{/if}
 		<hr />
