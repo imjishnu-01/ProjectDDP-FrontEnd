@@ -111,7 +111,7 @@
 		{#if errorMessage}
 			<p class="text-red-500">{errorMessage}</p>
 			{#if disableLoginButton}
-			<button type="button" class="btn bg-primary-500 ml-auto" on:click={() => openResendEmail()}> Resend verification email </button>
+			<button class="btn bg-primary-500 ml-auto" on:click={() => openResendEmail()}> Resend verification email </button>
 			
 			{/if}
 			
