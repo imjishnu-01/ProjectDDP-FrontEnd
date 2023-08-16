@@ -77,9 +77,13 @@
 		};
 		modalStore.trigger(modal);
 	}
-	const handleKeyPress = (event: { key: string; }) =>{
+	function handleKeyPress(event: KeyboardEvent & { currentTarget: EventTarget & HTMLInputElement; }) {
 		if(event.key === 'Enter'){
-			login();
+			if(email !== '' && password !== ''){
+				login();
+			}else{
+				errorMessage = 'Please fill in details'
+			}
 		}
 	}
 	// Check if the user is already logged in
@@ -101,7 +105,7 @@
 		</label>
 		<label class="label">
 			<span>Password</span>
-			<input class="input w-full" type="password" placeholder="Password" bind:value={password} />
+			<input class="input w-full" type="password" placeholder="Password" bind:value={password} on:keydown={handleKeyPress}/>
 		</label>
 
 		{#if errorMessage}
@@ -117,7 +121,7 @@
 				type="button"
 				class="btn bg-primary-500 ml-auto"
 				style="width: 10rem"
-				on:click={login}
+				on:click={() => login()}
 			>
 				Login
 			</button>
