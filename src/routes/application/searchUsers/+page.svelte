@@ -1,3 +1,7 @@
+<svelte:head>
+   <title>Search Candidates</title>
+</svelte:head>
+
 <script>
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';

@@ -1,3 +1,7 @@
+<svelte:head>
+   <title>Invitation Sent</title>
+</svelte:head>
+
 <script>
 	import { onMount } from 'svelte';
 	import { baseAPIURL } from '$lib/components/publicVar';

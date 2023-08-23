@@ -1,3 +1,6 @@
+<svelte:head>
+   <title>Reset Password</title>
+</svelte:head>
 <!-- src/routes/reset-password.svelte -->
 <script>
     import { page } from "$app/stores";

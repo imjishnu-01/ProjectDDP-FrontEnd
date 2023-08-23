@@ -1,3 +1,7 @@
+<svelte:head>
+   <title>ProjectDDP</title>
+</svelte:head>
+
 <script>
   
     const mainText = "Connect, Refer, Thrive Together";

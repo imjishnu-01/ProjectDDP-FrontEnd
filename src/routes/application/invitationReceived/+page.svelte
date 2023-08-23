@@ -1,3 +1,7 @@
+<svelte:head>
+   <title>Invitation Received</title>
+</svelte:head>
+
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { modalStore, Modal, Toast, toastStore } from '@skeletonlabs/skeleton';

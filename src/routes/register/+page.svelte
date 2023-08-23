@@ -1,3 +1,6 @@
+<svelte:head>
+   <title>Register</title>
+</svelte:head>
 <!-- Register.svelte -->
 
 <script lang="ts">
