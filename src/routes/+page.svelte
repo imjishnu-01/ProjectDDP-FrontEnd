@@ -1,4 +1,5 @@
 <script>
+  
     const mainText = "Connect, Refer, Thrive Together";
     let typedText = "";
   
@@ -39,7 +40,6 @@
       background-color: #2779bd;
     }
   </style>
-  
   <div class="center">
     <div class="text-4xl font-semibold mb-4" id="typingText">{typedText}</div>
     <p class="mt-4 text-lg">

@@ -1,11 +1,10 @@
 <script>
     
     import { page } from "$app/stores";
-    import { PUBLIC_MEASUREMENT_ID } from "$env/static/public";
-
+    
     $:{
         if(typeof gtag !== 'undefined'){
-            gtag('config', PUBLIC_MEASUREMENT_ID,{
+            gtag('config', process.env.PUBLIC_MEASUREMENT_ID,{
                 page_title: document.title,
                 page_path: $page.url.href,
             })
