@@ -15,6 +15,7 @@
 	let disableLoginButton = false;
 
 	const login = async () => {
+		errorMessage = 'Loading....'
 		try {
 			const response = await fetch(`${baseAPIURL}/api/user/login`, {
 				method: 'POST',
@@ -109,6 +110,9 @@
 		</label>
 
 		{#if errorMessage}
+			{#if errorMessage === 'Loading....'}
+			<p class="text-green-500">{errorMessage}</p>
+			{/if}
 			<p class="text-red-500">{errorMessage}</p>
 			{#if disableLoginButton}
 			<button class="btn bg-primary-500 ml-auto" on:click={() => openResendEmail()}> Resend verification email </button>

@@ -11,7 +11,7 @@
 	import { Avatar, AppBar, AppShell, Drawer, drawerStore, Modal } from '@skeletonlabs/skeleton';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
-
+	import Analytics from '$lib/components/analytics.svelte';
 
 	function drawerOpen(): void{
 		drawerStore.open()
@@ -21,7 +21,7 @@
 <Modal />
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
 
-
+<Analytics />
 <slot />
 
 	
