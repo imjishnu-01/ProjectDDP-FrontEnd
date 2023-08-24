@@ -56,7 +56,7 @@
 								<div class="grid-value">JD Link: {invitation.jd_link || 'No Link'}</div>
 
 								<div class="grid-value">Message: {invitation.message}</div>
-								<div class="grid-value">Sent At: {invitation.sent_at}</div>
+								<div class="grid-value">Sent At: {invitation.sent_at.substring(0, 10)}</div>
 							</div>
 							<hr />
 						{/if}
@@ -84,7 +84,7 @@
 
 								<div class="grid-value">Message: {invitation.message}</div>
 
-								<div class="grid-value">Sent At: {invitation.sent_at}</div>
+								<div class="grid-value">Sent At: {invitation.sent_at.substring(0, 10)}</div>
 
 								<div class="grid-value">Status: {invitation.response_status}</div>
 							</div>
@@ -123,7 +123,7 @@
 								<td>{invitation.role}</td>
 								<td>{invitation.jd_link || 'No Link'}</td>
 								<td>{invitation.message}</td>
-								<td>{invitation.sent_at}</td>
+								<td>{invitation.sent_at.substring(0, 10)}</td>
 							</tr>
 						{/if}
 					{/each}
@@ -163,7 +163,7 @@
 								<td>{invitation.company_name}</td>
 								<td>{invitation.role}</td>
 								<td>{invitation.message}</td>
-								<td>{invitation.sent_at}</td>
+								<td>{invitation.sent_at.substring(0, 10)}</td>
 								<td>{invitation.response_status}</td>
 							</tr>
 						{/if}
