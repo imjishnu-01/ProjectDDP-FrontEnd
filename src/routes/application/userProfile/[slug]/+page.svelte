@@ -40,14 +40,14 @@
 
 	export let id = $page.params.slug;
 	/**
-	 * @type {{ user_skills: string; user_companies: string; total_years_of_experience: Intl; firstName: string; lastName: string; id:string; } | null}
+	 * @type {{ user_skills: string; user_companies: string; total_months_of_experience: Intl; firstName: string; lastName: string; id:string; } | null}
 	 */
 	let user: {
 		user_companies_with_experience: any;
 		firstName: any;
 		lastName: any;
 		user_skills: string;
-		total_years_of_experience: any;
+		total_months_of_experience: any;
 		user_companies: string;
 		id: string;
 	} | null = null;
@@ -90,9 +90,9 @@
 			{/each}
 		</div>
 		<!-- Display Work Experiences -->
-		{#if user.total_years_of_experience || user.user_companies}
+		{#if user.total_months_of_experience || user.user_companies}
 			<div class="flex items-center justify-between mt-8">
-				<h2>Work Experience - {user.total_years_of_experience || 0} Years</h2>
+				<h2>Work Experience - { Math.floor(user.total_months_of_experience/ 12)|| 0} Years</h2>
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 				{#if user.user_companies && user.user_companies.trim() !== ''}
