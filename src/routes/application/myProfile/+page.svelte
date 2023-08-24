@@ -32,7 +32,7 @@
 	let firstName = '';
 	let lastName = '';
 	let email = '';
-	let yearsOfExperience = '';
+	let yearsOfExperience = 0;
 	let city = '';
 	let state = '';
 
@@ -50,7 +50,7 @@
 				firstName = data.firstName;
 				lastName = data.lastName;
 				email = data.email;
-				yearsOfExperience = data.total_years_of_experience;
+				yearsOfExperience = Math.floor(data.total_months_of_experience/12);
 				city = data.city;
 				state = data.state;
 
