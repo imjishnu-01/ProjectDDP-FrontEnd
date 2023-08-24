@@ -129,7 +129,7 @@
 
 							<div class="grid-content">Message: {invitation.message}</div>
 
-							<div class="grid-content">Received At: {invitation.sent_at.substring(0, 10)}</div>
+							<div class="grid-content">Received On: {invitation.sent_at.substring(0, 10)}</div>
 
 							<div class="grid-action">
 								<button
@@ -195,7 +195,7 @@
 						<th>Company Name</th>
 						<th>Role</th>
 						<th>Message</th>
-						<th>Received At</th>
+						<th>Received On</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -246,7 +246,7 @@
 						<th>Company Name</th>
 						<th>Role</th>
 						<th>Message</th>
-						<th>Received At</th>
+						<th>Received On</th>
 						<th>Status</th>
 					</tr>
 				</thead>
