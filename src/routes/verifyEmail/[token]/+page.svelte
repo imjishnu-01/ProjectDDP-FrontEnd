@@ -10,7 +10,6 @@
 	import { toastStore } from '@skeletonlabs/skeleton';
 		import type { ToastSettings } from '@skeletonlabs/skeleton';
 		const  token  = $page.params.token;
-	console.log(token)
 	// Function to send the verification request
 	const verifyEmail = async () => {
 	  try {
@@ -25,10 +24,10 @@
 			toastStore.trigger(emailVerifiedMsg);
 		  goto('/login')
 		} else {
-		  console.log('Email verification failed:', response.statusText);
+		  //console.log('Email verification failed:', response.statusText);
 		}
 	  } catch (error) {
-		console.error('Error verifying email:', error);
+		//console.error('Error verifying email:', error);
 	  }
 	};
   

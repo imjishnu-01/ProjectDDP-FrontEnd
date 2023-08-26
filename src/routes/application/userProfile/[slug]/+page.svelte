@@ -29,12 +29,12 @@
 
 			if (response.ok) {
 				user = await response.json();
-				console.log(user);
+				//console.log(user);
 			} else {
-				console.error('Error fetching user:', response.statusText);
+				//console.error('Error fetching user:', response.statusText);
 			}
 		} catch (error) {
-			console.error('Error fetching user:', error);
+			//console.error('Error fetching user:', error);
 		}
 	});
 
@@ -61,7 +61,7 @@
 			component: c,
 			title: 'Custom Form Component',
 			body: 'Complete the form below and then press submit.',
-			response: (r: any) => console.log('response:', r)
+			response: (r: any) => {} //console.log('response:', r)
 		};
 		modalStore.trigger(modal);
 	}

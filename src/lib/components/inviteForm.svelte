@@ -43,7 +43,7 @@
 
 				// Optionally, you can redirect to a success page or perform any other action here
 			} else {
-				console.error('Error sending job invitation:', response.statusText);
+				//console.error('Error sending job invitation:', response.statusText);
 				const inviteFailed: ToastSettings = {
 					background: 'bg-surface-500',
 					message: 'Error sending job invitation. Please full required fields again.'
@@ -52,7 +52,7 @@
 				toastStore.trigger(inviteFailed);
 			}
 		} catch (error) {
-			console.error('Error sending job invitation:', error);
+			//console.error('Error sending job invitation:', error);
 			const inviteFailed: ToastSettings = {
 				background: 'bg-surface-500',
 				message: 'Error sending job invitation. Please try again.'

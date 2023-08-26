@@ -28,7 +28,7 @@
 				errorMessage = data.error;
 			}
 		} catch (error) {
-			console.error(error);
+			//console.error(error);
 			errorMessage = 'An error occurred while sending the email';
 		}
         email = '';

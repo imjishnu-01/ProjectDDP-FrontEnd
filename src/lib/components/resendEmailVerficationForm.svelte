@@ -22,11 +22,11 @@
 			} else {
 				const errorData = await response.json();
 				errorMessage = errorData.error;
-				console.error('Error resending verification email:', errorData.error);
+				//console.error('Error resending verification email:', errorData.error);
 				// Display error message or handle error as needed
 			}
 		} catch (error) {
-			console.error('Error resending verification email:', error);
+			//console.error('Error resending verification email:', error);
 			errorMessage = 'An error occurred while sending the verification email.';
 			// Display error message or handle error as needed
 		}

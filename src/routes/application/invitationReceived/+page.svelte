@@ -36,10 +36,10 @@
 			if (response.ok) {
 				invitations = await response.json();
 			} else {
-				console.error('Error fetching invitations:', response.statusText);
+				//console.error('Error fetching invitations:', response.statusText);
 			}
 		} catch (error) {
-			console.error('Error fetching invitations:', error);
+			//console.error('Error fetching invitations:', error);
 		}
 	};
 
@@ -99,11 +99,11 @@
 			} else {
 				// There was an error updating the invitation status
 				const errorResponse = await response.json();
-				console.error('Error updating invitation status:', errorResponse.error);
+				//console.error('Error updating invitation status:', errorResponse.error);
 				return false;
 			}
 		} catch (error) {
-			console.error('Error updating invitation status:', error);
+			//console.error('Error updating invitation status:', error);
 			return false;
 		}
 	}

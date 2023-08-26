@@ -22,12 +22,12 @@
 			});
 			if (response.ok) {
 				invitations = await response.json();
-				console.log(invitations);
+				//console.log(invitations);
 			} else {
-				console.error('Error fetching invitations:', response.statusText);
+				//console.error('Error fetching invitations:', response.statusText);
 			}
 		} catch (error) {
-			console.error('Error fetching invitations:', error);
+			//console.error('Error fetching invitations:', error);
 		}
 	};
 

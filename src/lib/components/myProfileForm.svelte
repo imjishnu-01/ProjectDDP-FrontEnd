@@ -19,9 +19,9 @@
       });
       if (response.ok) {
         userProfile = await response.json();
-        console.log(userProfile);
+        //console.log(userProfile);
       } else {
-        console.error('Failed to fetch user profile');
+        //console.error('Failed to fetch user profile');
       }
     }
   

@@ -55,7 +55,7 @@
 				}
 			}
 		} catch (error) {
-			console.error('Error:', error);
+			//console.error('Error:', error);
 		}
 	};
 	function openResendEmail() {
@@ -65,7 +65,7 @@
 			component: c,
 			title: 'Email verification pending',
 			body: 'Resend verification email',
-			response: (r: boolean) => console.log('Kol')
+			response: (r: boolean) => {} //console.log('Kol')
 		};
 		modalStore.trigger(modal);
 	}
@@ -77,7 +77,7 @@
 			component: c,
 			title: 'Reset password',
 			body: 'Send password reset email',
-			response: (r: boolean) => console.log('Kol')
+			response: (r: boolean) => {} //console.log('Kol')
 		};
 		modalStore.trigger(modal);
 	}

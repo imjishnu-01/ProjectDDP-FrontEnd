@@ -11,7 +11,7 @@
 				deleteCookie('token');
 				deleteCookie('userID');
 			} catch (error) {
-				console.error('Error deleting cookies:', error);
+				//console.error('Error deleting cookies:', error);
 			}
 		}
 

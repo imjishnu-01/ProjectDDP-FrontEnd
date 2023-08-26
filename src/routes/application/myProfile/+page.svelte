@@ -67,13 +67,12 @@
 					const [experienceDetails, experienceId, _, position] = experienceWithId.split('|');
 					return { details: experienceDetails, id: experienceId, position: position || '' };
 				});
-				console.log(experiencesWithIds);
-				console.log(userWorkExperiences);
+				
 			} else {
-				console.error('Error fetching skills and work experiences:', response.statusText);
+				//console.error('Error fetching skills and work experiences:', response.statusText);
 			}
 		} catch (error) {
-			console.error('Error fetching skills and work experiences:', error);
+			//console.error('Error fetching skills and work experiences:', error);
 		}
 	};
 
@@ -124,7 +123,7 @@
 							toastStore.trigger(skillError);
 						}
 					} catch (error) {
-						console.error('Error deleting skill:', error);
+						//console.error('Error deleting skill:', error);
 					}
 				} else {
 					// If the user cancels deletion, display a toast for cancellation
@@ -188,7 +187,7 @@
 							toastStore.trigger(experienceError);
 						}
 					} catch (error) {
-						console.error('Error deleting work experience:', error);
+						//console.error('Error deleting work experience:', error);
 					}
 				} else {
 					// If the user cancels deletion, display a toast for cancellation
@@ -213,7 +212,7 @@
 			component: c,
 			title: 'Add Skill',
 			body: 'Complete the form below and then press submit.',
-			response: (r: any) => console.log('response:', r)
+			response: (r: any) => {}
 		};
 		modalStore.trigger(modal);
 	}
@@ -239,7 +238,7 @@
 			component: c,
 			title: 'Edit Profile',
 			body: 'Complete the form below and then press submit.',
-			response: (r: any) => console.log('response:', r)
+			response: (r: any) => {} //console.log('response:', r)
 		};
 		modalStore.trigger(modal);
 	}
@@ -251,7 +250,7 @@
 			component: c,
 			title: 'Edit Profile',
 			body: 'Complete the form below and then press submit.',
-			response: (r: any) => console.log('response:', r)
+			response: (r: any) => {} //console.log('response:', r)
 		};
 		modalStore.trigger(modal);
 	}

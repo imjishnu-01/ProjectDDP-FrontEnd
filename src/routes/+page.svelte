@@ -55,4 +55,3 @@
       <a href="/register" class="cta-button ml-4">Sign Up</a>
     </div>
   </div>
-  

@@ -43,7 +43,7 @@
 				toastStore.trigger(skillModal);
 			}
 		} catch (error) {
-			console.log(error)
+			//console.log(error)
 			//Error while adding skill
 			const skillModal: ToastSettings = {
 				background: 'bg-primary-500',

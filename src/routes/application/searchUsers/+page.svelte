@@ -51,10 +51,10 @@
 					showContent = false;
 				}
 			} else {
-				console.error('Error fetching users:', response.statusText);
+				//console.error('Error fetching users:', response.statusText);
 			}
 		} catch (error) {
-			console.error('Error fetching users:', error);
+			//console.error('Error fetching users:', error);
 		}
 	};
 </script>
