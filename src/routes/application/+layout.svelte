@@ -29,7 +29,7 @@
 					</span>
 				</button>
 				<span class="fa-solid fa-handshake text-6xl"></span>
-				<strong class="text-xl uppercase">ProjectDDP</strong>
+				<strong class="text-xl">ProjectDDP</strong>
 				
 				
 			</svelte:fragment>
