@@ -30,7 +30,7 @@
 <Modal />
 
 <Analytics />
-
+<slot />
 
 	
 	<AppShell>
