@@ -1,5 +1,5 @@
 <svelte:head>
-   <title>Login</title>
+   <title>ProjectDDP</title>
 </svelte:head>
 <script lang="ts">
 
