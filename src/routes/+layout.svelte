@@ -6,6 +6,14 @@
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
+	/*import '../lib/assets/web/assets/mobirise-icons2/mobirise2.css'
+	import '../lib/assets/bootstrap/css/bootstrap.min.css'
+	import '../lib/assets/bootstrap/css/bootstrap-grid.min.css'
+	import '../lib/assets/bootstrap/css/bootstrap-reboot.min.css'
+	import '../lib/assets/parallax/jarallax.css'
+	import '../lib/assets/theme/css/style.css'*/
+
+
 	import { Toast } from '@skeletonlabs/skeleton';
 
 	import { Avatar, AppBar, AppShell, Drawer, drawerStore, Modal } from '@skeletonlabs/skeleton';
@@ -20,10 +28,9 @@
 </script>
 
 <Modal />
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
 
 <Analytics />
-<slot />
+
 
 	
 	<AppShell>
