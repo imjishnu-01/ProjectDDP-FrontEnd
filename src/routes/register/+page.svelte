@@ -117,7 +117,7 @@
 
 		<hr class="m-2">
 		<label>
-			<input type="checkbox" bind:checked={isChecked} /> I acknowledge that I have read and agree to the <button on:click={termsOfUsage} class="text-blue-600">Terms of Usage</button> for this service.
+			<input type="checkbox" class="checkbox" bind:checked={isChecked} /> I acknowledge that I have read and agree to the <button on:click={termsOfUsage} class="text-blue-600">Terms of Usage</button> for this service.
 		</label>
 
 		<hr class="m-2">
