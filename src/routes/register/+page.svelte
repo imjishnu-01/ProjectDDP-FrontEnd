@@ -16,9 +16,6 @@
 	let confirmPassword = '';
 	let errorMessage = '';
 
-	console.log('Mack')
-	
-
 	async function registerUser() {
 		// Validate input fields
 		if (!firstName || !lastName || !email || !password || !confirmPassword) {
@@ -103,11 +100,11 @@
 		</label>
 		<hr class="m-2">
 		
-		
 		<button on:click={registerUser} class="btn bg-primary-500 ml-auto" style="width: 10rem">
 			Register
 		</button>
 		<hr />
 		<span>Already have a account? <a href="/login" class="btn bg-surface-500 m-2">Login</a></span>
 	</form>
+
 </div>

@@ -282,12 +282,21 @@
 	<!-- Display Work Experiences -->
 	<div class="flex items-center justify-between mt-8">
 		<h2>Work Experience</h2>
+		{#if userSkills.length < 1}
+		<button class="btn bg-secondary-500" on:click={() => addExperienceForm()} disabled>
+			Add Work Experience
+		</button>
+		{:else}
 		<button class="btn bg-secondary-500" on:click={() => addExperienceForm()}>
 			Add Work Experience
 		</button>
+		{/if}
 	</div>
 	<hr />
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+		{#if userSkills.length < 1}
+		<h3 class="text-red-600">Add Skills before addinng work experience</h3>
+		{/if}
 		{#each userWorkExperiences as experience}
 			<div class="card p-4 bg-primary-warning flex flex-col gap-10 relative">
 				<div>{experience.details}</div>
