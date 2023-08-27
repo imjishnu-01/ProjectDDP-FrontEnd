@@ -7,7 +7,9 @@
 	import { goto } from '$app/navigation';
 	import { baseAPIURL } from '$lib/components/publicVar';
 	import { modalStore, Modal } from '@skeletonlabs/skeleton';
-	import type { ModalSettings } from '@skeletonlabs/skeleton';
+	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
+	import { browser } from '$app/environment';
+	import TermsOfUsage from '$lib/components/termsOfUsage.svelte';
 
 	let firstName = '';
 	let lastName = '';
@@ -16,6 +18,19 @@
 	let confirmPassword = '';
 	let errorMessage = '';
 
+	
+	function termsOfUsage(): void {
+		const c: ModalComponent = { ref: TermsOfUsage };
+		const modal: ModalSettings = {
+			type: 'component',
+			component: c,
+			title: 'Terms of Usage',
+			body: 'By clicking on "Register" you acknowledge that you have read and agreed to the Terms of Usage for this service.',
+			response: (r: any) => {}
+		};
+		modalStore.trigger(modal);
+	}
+	
 	async function registerUser() {
 		// Validate input fields
 		if (!firstName || !lastName || !email || !password || !confirmPassword) {
@@ -68,7 +83,7 @@
 </script>
 
 <div class="container flex justify-center items-center h-screen">
-	<form class="card p-4 flex flex-col gap-3 w-80" on:submit|preventDefault={registerUser}>
+	<form class="card p-2 flex flex-col gap-2 w-100" on:submit|preventDefault={registerUser}>
 		<h1 class="text-center text-3xl font-bold">Register</h1>
 		{#if errorMessage}
 			<p class="text-red-500">{errorMessage}</p>
@@ -98,13 +113,16 @@
 				placeholder="Confirm Password"
 			/>
 		</label>
+
+		<hr class="m-2">
+		<span>By clicking on "Register" I acknowledge that I have read and agree to the <button on:click={termsOfUsage} class="text-blue-600">Terms of Usage</button> for this service.</span>
 		<hr class="m-2">
 		
 		<button on:click={registerUser} class="btn bg-primary-500 ml-auto" style="width: 10rem">
 			Register
 		</button>
 		<hr />
-		<span>Already have a account? <a href="/login" class="btn bg-surface-500 m-2">Login</a></span>
+		<span>Already have a account? <a href="/login" class="text-blue-600 m-2">Login</a></span>
 	</form>
 
 </div>
