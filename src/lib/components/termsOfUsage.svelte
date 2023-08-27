@@ -28,7 +28,7 @@
         <h3 class="text-lg font-semibold mt-4">3. Google Analytics</h3>
         <p class="mb-4">
             We have integrated Google Analytics to collect anonymous usage data that helps us understand user behavior and improve our websites.
-            Google Analytics may use cookies to gather information, but it does not collect personally identifiable information.
+            Google Analytics may use cookies to gather information.
         </p>
 
         <!-- Add more sections here -->
@@ -38,29 +38,29 @@
             You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.
         </p>
 
-        <h3 class="text-lg font-semibold mt-4">5. Intellectual Property</h3>
+        <!--<h3 class="text-lg font-semibold mt-4">5. Intellectual Property</h3>
         <p class="mb-4">
             All content and materials on the websites, unless otherwise stated, are the property of the Project DDP team and are protected by copyright and other intellectual property laws.
             You may not reproduce, distribute, modify, or otherwise use any content without our prior written consent.
-        </p>
+        </p>-->
 
-        <h3 class="text-lg font-semibold mt-4">6. Disclaimer of Warranties</h3>
+        <h3 class="text-lg font-semibold mt-4">5. Disclaimer of Warranties</h3>
         <p class="mb-4">
             The websites are provided on an "as-is" and "as available" basis.
             We do not make any warranties, express or implied, regarding the accuracy, reliability, or availability of the websites or their content.
         </p>
 
-        <h3 class="text-lg font-semibold mt-4">7. Limitation of Liability</h3>
+        <h3 class="text-lg font-semibold mt-4">6. Limitation of Liability</h3>
         <p class="mb-4">
             In no event shall the Project DDP team be liable for any indirect, consequential, special, punitive, or incidental damages arising out of or related to your use of the websites.
         </p>
 
-        <h3 class="text-lg font-semibold mt-4">8. Indemnification</h3>
+        <h3 class="text-lg font-semibold mt-4">7. Indemnification</h3>
         <p class="mb-4">
             You agree to indemnify and hold harmless the Project DDP team from any claims, losses, liabilities, or expenses arising from your use of the websites, violation of these terms, or infringement of any third-party rights.
         </p>
 
-        <h3 class="text-lg font-semibold mt-4">9. Changes to Terms</h3>
+        <h3 class="text-lg font-semibold mt-4">8. Changes to Terms</h3>
         <p class="mb-4">
             We reserve the right to modify these terms at any time.
             Any changes will be effective immediately upon posting on the websites.
@@ -68,7 +68,7 @@
         </p>
     </div>
 
-    <button class="btn bg-primary-500 m-2" style="float: right;" on:click={closeModal}> Agree </button>
+    <button type="button" class="btn bg-primary-500 m-2" style="float: right;" on:click={closeModal}> Agree </button>
 </div>
 
 
