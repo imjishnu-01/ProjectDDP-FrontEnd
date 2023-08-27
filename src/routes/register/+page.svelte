@@ -17,7 +17,7 @@
 	let password = '';
 	let confirmPassword = '';
 	let errorMessage = '';
-
+	let isChecked = false;
 	
 	function termsOfUsage(): void {
 		const c: ModalComponent = { ref: TermsOfUsage };
@@ -82,6 +82,8 @@
 	
 </script>
 
+<TermsOfUsage />
+
 <div class="container flex justify-center items-center h-screen">
 	<form class="card p-2 flex flex-col gap-2 w-100" on:submit|preventDefault={registerUser}>
 		<h1 class="text-center text-3xl font-bold">Register</h1>
@@ -115,10 +117,13 @@
 		</label>
 
 		<hr class="m-2">
-		<span>By clicking on "Register" I acknowledge that I have read and agree to the <button on:click={termsOfUsage} class="text-blue-600">Terms of Usage</button> for this service.</span>
+		<label>
+			<input type="checkbox" bind:checked={isChecked} /> I acknowledge that I have read and agree to the <button on:click={termsOfUsage} class="text-blue-600">Terms of Usage</button> for this service.
+		</label>
+
 		<hr class="m-2">
 		
-		<button on:click={registerUser} class="btn bg-primary-500 ml-auto" style="width: 10rem">
+		<button on:click={registerUser} class="btn bg-primary-500 ml-auto" style="width: 10rem" disabled={!isChecked}>
 			Register
 		</button>
 		<hr />

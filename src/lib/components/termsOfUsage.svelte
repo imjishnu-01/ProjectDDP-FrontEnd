@@ -6,7 +6,7 @@
         modalStore.close();
     }
 </script>
-<div class="max-w-3xl mx-auto p-4" style="height: 100vh; overflow-y: auto;">
+<div class="max-w-3xl mx-auto p-4 bg-surface-600" style="height: 100vh; overflow-y: auto;">
     <div class="p-6 rounded-lg shadow-md">
 
         <h2 class="text-2xl font-semibold mb-4">Terms of Usage Agreement</h2>
@@ -68,7 +68,7 @@
         </p>
     </div>
 
-    <button class="btn bg-surface-500  item-right" on:click={closeModal}>Close </button>
+    <button class="btn bg-primary-500 m-2" style="float: right;" on:click={closeModal}> Agree </button>
 </div>
 
 
