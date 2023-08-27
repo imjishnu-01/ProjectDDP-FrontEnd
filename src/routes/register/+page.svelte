@@ -82,7 +82,6 @@
 	
 </script>
 
-<TermsOfUsage />
 
 <div class="container flex justify-center items-center h-screen">
 	<form class="card p-2 flex flex-col gap-2 w-100" on:submit|preventDefault={registerUser}>
