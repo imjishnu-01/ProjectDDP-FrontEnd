@@ -16,6 +16,9 @@
 	let confirmPassword = '';
 	let errorMessage = '';
 
+	console.log('Mack')
+	
+
 	async function registerUser() {
 		// Validate input fields
 		if (!firstName || !lastName || !email || !password || !confirmPassword) {
@@ -64,10 +67,11 @@
 			errorMessage = 'An error occurred while registering the user.';
 		}
 	}
+	
 </script>
 
 <div class="container flex justify-center items-center h-screen">
-	<form class="card p-4 flex flex-col gap-3 w-80">
+	<form class="card p-4 flex flex-col gap-3 w-80" on:submit|preventDefault={registerUser}>
 		<h1 class="text-center text-3xl font-bold">Register</h1>
 		{#if errorMessage}
 			<p class="text-red-500">{errorMessage}</p>
@@ -97,7 +101,9 @@
 				placeholder="Confirm Password"
 			/>
 		</label>
-
+		<hr class="m-2">
+		
+		
 		<button on:click={registerUser} class="btn bg-primary-500 ml-auto" style="width: 10rem">
 			Register
 		</button>

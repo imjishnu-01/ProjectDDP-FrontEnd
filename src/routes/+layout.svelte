@@ -63,7 +63,7 @@
 		<svelte:fragment slot="pageHeader">Page Header</svelte:fragment> -->
 		<!-- Router Slot -->
 		<div class="container p-10 w-full h-full">
-			<slot />
+			<!--<slot />-->
 		</div>
 		<!-- ---- / 
 		<svelte:fragment slot="pageFooter">Page Footer</svelte:fragment>
